@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Bootstrap, Bootstrap Icons, JQuery -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="index.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Oblig 3 - Kinobiletter</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-xl-5">
+            <h1>Bestilling av kinobiletter</h1>
+
+            <form class="row needs-validation">
+                <div class="col-md-6">
+                    <label for="film" class="form-label">Velg film: </label><br>
+                    <select class="form-select" id="film">
+                        <option>Inception</option>
+                        <option>Interstellar</option>
+                        <option>Avatar: The way of water</option>
+                        <option>The Darkest Hour</option>
+                        <option>Sully</option>
+                        <option>Munich: The Edge of War</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="numberOfTickets" class="form-label">Antall: </label>
+                    <input type="text" class="form-control" id="numberOfTickets">
+                    <div id="errorNumberofTickets"></div>
+                </div>
+                <div class="col-md-6">
+                    <label for="firstName" class="form-label">Fornavn: </label>
+                    <input type="text" class="form-control" id="firstName">
+                    <div id="errorFirstName"></div>
+                </div>
+                <div class="col-md-6">
+                    <label for="lastName" class="form-label">Etternavn: </label>
+                    <input type="text" class="form-control" id="lastName">
+                    <div id="errorLastName"></div>
+                </div>
+                <div class="col-md-6">
+                    <label for="phone" class="form-label">Telefonnr: </label>
+                    <input type="text" class="form-control" id="phone">
+                    <div id="errorPhone"></div>
+                </div>
+                <div class="col-md-6">
+                    <label for="email" class="form-label">Epost: </label>
+                    <input type="text" class="form-control" id="email">
+                    <div id="errorEmail"></div>
+                </div>
+            </form><br>
+
+            <button type="button" class="btn btn-primary" onclick="purchaseTicket()"><i class="bi bi-ticket-perforated-fill"></i> Kjøp billett</button>
+        </div>
+
+        <div class="col-xl-7">
+            <h2>Alle billetter</h2>
+            <div id="ticketsTable"></div>
+            <button class="btn btn-danger" onclick="deleteTickets()"><i class="bi bi-trash-fill"></i> Slett alle billetter</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+DROP TABLE IF EXISTS Tickets;
+
+CREATE TABLE Tickets (
+    id INT AUTO_INCREMENT NOT NULL,
+    film VARCHAR(255) NOT NULL,
+    numberOfTickets VARCHAR(20) NOT NULL,
+    firstName VARCHAR(255) NOT NULL,
+    lastName VARCHAR(255) NOT NULL,
+    phone VARCHAR(20) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    PRIMARY KEY (id)
+);
